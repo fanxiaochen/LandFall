@@ -13,5 +13,21 @@ namespace landfall
   /// </summary>
   public partial class App : Application
   {
+    protected override void OnStartup(StartupEventArgs e)
+    {
+      string basePath = AppDomain.CurrentDomain.BaseDirectory;
+      string dataSource = basePath + "landfall.dat";
+      if (!dataManager.loadFile(dataSource))
+      {
+        App.Current.Shutdown();
+      }
+      else
+      {
+        base.OnStartup(e);
+      }
+    }
+    public static DataManager dataManager = new DataManager();
+    public static User currentUser = new User();
   }
+
 }
