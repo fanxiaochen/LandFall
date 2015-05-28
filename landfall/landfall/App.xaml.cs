@@ -27,7 +27,7 @@ namespace landfall
       }
     }
     public static DataManager dataManager = new DataManager();
-    public static User currentUser = new User();
+    public static User currentUser = null;
   }
 
 }

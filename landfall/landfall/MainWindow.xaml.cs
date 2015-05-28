@@ -26,6 +26,8 @@ namespace landfall
 
     private ChangePwdWindow changePwdWindow = null;
 
+    private AdminControlWindow adminControlWindow = null;
+
     public MainWindow()
     {
       InitializeComponent();
@@ -47,7 +49,25 @@ namespace landfall
       System.Windows.Forms.MenuItem[] children = new System.Windows.Forms.MenuItem[] { itemControlPanel, itemChangePwd, itemAbout };
       notifyIcon.ContextMenu = new System.Windows.Forms.ContextMenu(children);
 
+      itemControlPanel.Click += new System.EventHandler(Controlpanel_Click);
       itemChangePwd.Click += new System.EventHandler(Changepwd_Click);
+      itemAbout.Click += new System.EventHandler(About_Click);
+    }
+
+    public void Controlpanel_Click(object sender, EventArgs e)
+    {
+      if (App.currentUser._userName == "admin")
+      {
+        if (adminControlWindow != null)
+          adminControlWindow.Close();
+
+        adminControlWindow = new AdminControlWindow();
+        adminControlWindow.ShowDialog();
+      }
+      else
+      {
+
+      }
     }
 
     public void Changepwd_Click(object sender, EventArgs e)
@@ -57,6 +77,11 @@ namespace landfall
 
       changePwdWindow = new ChangePwdWindow();
       changePwdWindow.ShowDialog();
+    }
+
+    public void About_Click(object sender, EventArgs e)
+    {
+
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
