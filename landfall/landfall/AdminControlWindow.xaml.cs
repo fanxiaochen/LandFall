@@ -27,7 +27,7 @@ namespace landfall
     {
       InitializeComponent();
 
-      ((this.FindName("dataGrid")) as DataGrid).ItemsSource = App.dataManager.GetUsers();
+      ((this.FindName("listView")) as ListView).ItemsSource = App.dataManager.GetUsers();
     }
 
     private void Button_Click_Add(object sender, RoutedEventArgs e)

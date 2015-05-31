@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace landfall
   public class DataManager
   {
     private string _dataFile = null;
-    private List<User> _users = new List<User>();
+    private ObservableCollection<User> _users = new ObservableCollection<User>();
 
     public bool loadFile(string dataFile)
     {
@@ -35,7 +36,7 @@ namespace landfall
       FileStream fs = new FileStream(_dataFile, FileMode.Open);
       BinaryReader br = new BinaryReader(fs);
       string json = br.ReadString();
-      _users = JsonConvert.DeserializeObject<List<User>>(json);
+      _users = JsonConvert.DeserializeObject<ObservableCollection<User>>(json);
       br.Close();
       fs.Close();
     }
@@ -89,7 +90,18 @@ namespace landfall
 
     public void ClearUsers()
     {
-      _users.RemoveAll(user => user._userName != "admin");
+      User admin = new User();
+      foreach (User user in _users)
+      {
+        if (user._userName == "admin")
+        {
+          admin._userName = user._userName;
+          admin._pwd = user._pwd;
+          break;
+        }
+      }
+      _users.Clear();
+      _users.Add(admin);
       saveDataFile();
     }
 
@@ -107,7 +119,7 @@ namespace landfall
       saveDataFile();
     }
 
-    public List<User> GetUsers()
+    public ObservableCollection<User> GetUsers()
     {
       return _users;
     }
