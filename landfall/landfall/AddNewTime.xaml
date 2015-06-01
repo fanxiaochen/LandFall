@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:landfall"
         Title="AddNewTimeWindow" Height="300" Width="152.8" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-    <ListView x:Name="listView" HorizontalAlignment="Left" Height="293.6" VerticalAlignment="Top" Width="146.4" 
+    <ListView x:Name="listView" HorizontalAlignment="Left" Height="256.8" VerticalAlignment="Top" Width="146.4" 
               ScrollViewer.HorizontalScrollBarVisibility="Disabled" MouseDoubleClick="ListView_MouseDoubleClick">
     		<ListView.View>
         <GridView>
@@ -14,6 +14,7 @@
         </GridView>
       </ListView.View>
     	</ListView>
+    <Button x:Name="cancel" Content="取消" HorizontalAlignment="Left" Margin="35.6,261.8,0,0" VerticalAlignment="Top" Width="75" Click="cancel_Click"/>
         
     </Grid>
 </Window>

@@ -42,5 +42,10 @@ namespace landfall
     {
       return userName;
     }
+
+    private void cancel_Click(object sender, RoutedEventArgs e)
+    {
+      this.Close();
+    }
   }
 }

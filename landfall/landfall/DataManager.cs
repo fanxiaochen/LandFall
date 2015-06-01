@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows;
+using System.Data;
 
 using Newtonsoft.Json;
 
@@ -15,6 +16,109 @@ namespace landfall
   {
     private string _dataFile = null;
     private ObservableCollection<User> _users = new ObservableCollection<User>();
+    private DataTable _timeDt = new DataTable("Time Table");
+
+    public void InitTimeTable()
+    {
+      DataColumn times = new DataColumn("时间");
+      DataColumn mon = new DataColumn("周一");
+      DataColumn tus = new DataColumn("周二");
+      DataColumn wed = new DataColumn("周三");
+      DataColumn thu = new DataColumn("周四");
+      DataColumn fri = new DataColumn("周五");
+      DataColumn sat = new DataColumn("周六");
+      DataColumn sun = new DataColumn("周日");
+
+      _timeDt.Columns.Add(times);
+      _timeDt.Columns.Add(mon);
+      _timeDt.Columns.Add(tus);
+      _timeDt.Columns.Add(wed);
+      _timeDt.Columns.Add(thu);
+      _timeDt.Columns.Add(fri);
+      _timeDt.Columns.Add(sat);
+      _timeDt.Columns.Add(sun);
+
+      _timeDt.Rows.Add("08-10", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("10-12", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("12-14", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("14-16", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("16-18", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("18-20", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("20-22", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("22-24", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("00-02", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("02-04", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("04-06", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("06-08", " ", " ", " ", " ", " ", " ", " ");
+    }
+
+    public void UpdateTimeTableFromUsers()
+    {
+      ClearTimeTable();
+
+      foreach (User user in _users)
+      {
+        foreach (TimeInterval ti in user._timeIntervals)
+        {
+          int col = ti.day;
+          int row = -1;
+          if (ti.start >= 8)
+          {
+            row = (ti.start - 8) / 2;
+          }
+          else
+          {
+            row = (ti.start + 24 - 8) / 2;
+          }
+
+          _timeDt.Rows[row][col] = user._userName;
+        }
+      }
+    }
+
+    public void UpdateUsersFromTimeTable()
+    {
+      ClearTimeIntervals();
+
+      // 12 time intervals and 1 column for times, 7 columns for days
+      for (int row = 0; row < 12; ++row)
+      {
+        for (int col = 1; col < 8; ++col)
+        {
+          string userName = _timeDt.Rows[row][col] as string;
+          if (userName == " ")
+            continue;
+
+          int index = FindUserIndex(userName);
+          if (index != -1)
+          {
+            int day = col;
+            int start = (row * 2 + 8) < 24 ? (row * 2 + 8) : (row * 2 + 8 - 24);
+            int end = start + 2;
+
+            TimeInterval timeInterval = new TimeInterval();
+            timeInterval.day = day;
+            timeInterval.start = start;
+            timeInterval.end = end;
+            _users[index]._timeIntervals.Add(timeInterval);
+          }
+        }
+      }
+
+      SaveDataFile();
+    }
+
+    public void ClearTimeTable()
+    {
+      // 12 time intervals and 1 column for times, 7 columns for days
+      for (int row = 0; row < 12; ++row)
+      {
+        for (int col = 1; col < 8; ++col)
+        {
+          _timeDt.Rows[row][col] = " ";
+        }
+      }
+    }
 
     public bool loadFile(string dataFile)
     {
@@ -70,6 +174,7 @@ namespace landfall
       }
       _users.Add(user);
       SaveDataFile();
+      UpdateTimeTableFromUsers();
       return true;
     }
 
@@ -87,6 +192,7 @@ namespace landfall
         {
           _users.Remove(user);
           SaveDataFile();
+          UpdateTimeTableFromUsers();
           return true;
         }
       }
@@ -98,12 +204,18 @@ namespace landfall
     {
       _users.Clear();
       SaveDataFile();
+      UpdateTimeTableFromUsers();
     }
 
 
     public ObservableCollection<User> GetUsers()
     {
       return _users;
+    }
+
+    public DataTable getDataTable()
+    {
+      return _timeDt;
     }
 
     public int FindUserIndex(string userName)
