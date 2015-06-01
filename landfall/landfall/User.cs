@@ -17,12 +17,12 @@ namespace landfall
   {
     public string _userName {get; set;}
     public string _pwd {get; set;}
-    public List<TimeInterval> _timeIntervals = new List<TimeInterval>();
+    public List<TimeInterval> _timeIntervals = null;
 
     public void ChangePassword(string newPwd)
     {
       _pwd = newPwd;
-      App.dataManager.OverwriteUser(this);
+      App.dataManager.SaveDataFile();
     }
 
     virtual public bool AddUser(User user) { return false; }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +13,7 @@ namespace landfall
   public class DataManager
   {
     private string _dataFile = null;
-    private ObservableCollection<User> _users = new ObservableCollection<User>();
+    private List<User> _users = new List<User>();
 
     public bool loadFile(string dataFile)
     {
@@ -26,26 +25,23 @@ namespace landfall
       }
       else
       {
-        ReadDataFile();
+        readDataFile();
         return true;
       }
     }
 
-    public void ReadDataFile()
+    public void readDataFile()
     {
       FileStream fs = new FileStream(_dataFile, FileMode.Open);
       BinaryReader br = new BinaryReader(fs);
       string json = br.ReadString();
-      _users = JsonConvert.DeserializeObject<ObservableCollection<User>>(json);
+      _users = JsonConvert.DeserializeObject<List<User>>(json);
       br.Close();
       fs.Close();
     }
 
-    public void SaveDataFile()
+    public void saveDataFile()
     {
-      if (App.currentUser._userName == "admin")
-        _users.Add(App.currentUser);
-
       FileStream fs = new FileStream(_dataFile, FileMode.Create);
       BinaryWriter bw = new BinaryWriter(fs);
       string json = JsonConvert.SerializeObject(_users, Formatting.Indented);
@@ -53,23 +49,20 @@ namespace landfall
       bw.Flush();
       bw.Close();
       fs.Close();
-
-      if (App.currentUser._userName == "admin")
-        _users.RemoveAt(FindUserIndex(App.currentUser._userName));
     }
 
     public bool AddUser(User user)
     {
       foreach (User usr in _users)
       {
-        if (usr._userName == user._userName || user._userName == "admin")
+        if (usr._userName == user._userName)
         {
           MessageBox.Show("该用户已存在！");
           return false;
         }
       }
       _users.Add(user);
-      SaveDataFile();
+      saveDataFile();
       return true;
     }
 
@@ -86,7 +79,7 @@ namespace landfall
         if (user._userName == userName)
         {
           _users.Remove(user);
-          SaveDataFile();
+          saveDataFile();
           return true;
         }
       }
@@ -96,34 +89,27 @@ namespace landfall
 
     public void ClearUsers()
     {
-      _users.Clear();
-      SaveDataFile();
+      _users.RemoveAll(user => user._userName != "admin");
+      saveDataFile();
     }
 
-
-    public ObservableCollection<User> GetUsers()
-    {
-      return _users;
-    }
-
-    public int FindUserIndex(string userName)
-    {
-      for (int index = 0, length = _users.Count; index < length; ++index)
-      {
-        if (userName == _users[index]._userName)
-        {
-          return index;
-        }
-      }
-      return -1;
-    }
-
-    public void ClearTimeIntervals()
+    public void OverwriteUser(User currentUser)
     {
       foreach (User user in _users)
       {
-        user._timeIntervals.Clear();
+        if (user._userName == currentUser._userName)
+        {
+          user._pwd = currentUser._pwd;
+          user._timeIntervals = currentUser._timeIntervals;
+          break;
+        }
       }
+      saveDataFile();
+    }
+
+    public List<User> GetUsers()
+    {
+      return _users;
     }
 
     public bool Login(string userName, string pwd)
@@ -137,9 +123,6 @@ namespace landfall
           {
             App.currentUser._userName = user._userName;
             App.currentUser._pwd = user._pwd;
-
-            _users.RemoveAt(FindUserIndex(App.currentUser._userName));
-
             return true;
           }
         }

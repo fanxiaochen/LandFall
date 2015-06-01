@@ -75,7 +75,7 @@ namespace landfall
       timeDt.Rows.Add("04-06", " ", " ", " ", " ", " ", " ", " ");
       timeDt.Rows.Add("06-08", " ", " ", " ", " ", " ", " ", " ");
 
-      //TimeTableFromUsers();
+      TimeTableFromUsers();
 
     }
 
@@ -131,6 +131,8 @@ namespace landfall
           }
         }
       }
+
+      App.dataManager.SaveDataFile();
     }
 
     private void Table_Click_Add(object sender, RoutedEventArgs e)

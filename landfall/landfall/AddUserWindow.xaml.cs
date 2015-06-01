@@ -29,6 +29,7 @@ namespace landfall
       User newUser = new User();
       newUser._userName = this.userName.Text;
       newUser._pwd = this.pwdBox.Password;
+      newUser._timeIntervals = new List<TimeInterval>();
 
       if (App.currentUser.AddUser(newUser))
         this.Close();

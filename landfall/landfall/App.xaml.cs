@@ -26,6 +26,7 @@ namespace landfall
         base.OnStartup(e);
       }
     }
+
     public static DataManager dataManager = new DataManager();
     public static User currentUser = null;
   }
