@@ -1,28 +1,35 @@
-÷[
+×[
   {
-    "_timeIntervals": [],
-    "_userName": "gea",
-    "_pwd": "af"
+    "_timeIntervals": [
+      {
+        "day": 7,
+        "start": 10,
+        "end": 12
+      },
+      {
+        "day": 4,
+        "start": 12,
+        "end": 14
+      },
+      {
+        "day": 1,
+        "start": 20,
+        "end": 22
+      }
+    ],
+    "_userName": "fanxiaochen",
+    "_pwd": "fan"
   },
   {
-    "_timeIntervals": [],
-    "_userName": "eaf",
-    "_pwd": "afw"
-  },
-  {
-    "_timeIntervals": [],
-    "_userName": "eag",
-    "_pwd": "afs"
-  },
-  {
-    "_timeIntervals": [],
-    "_userName": "faer",
-    "_pwd": "gsa"
-  },
-  {
-    "_timeIntervals": [],
-    "_userName": "fwaef",
-    "_pwd": "gea"
+    "_timeIntervals": [
+      {
+        "day": 1,
+        "start": 18,
+        "end": 20
+      }
+    ],
+    "_userName": "chengxiaoping",
+    "_pwd": "fan"
   },
   {
     "_timeIntervals": null,

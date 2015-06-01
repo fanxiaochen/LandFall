@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Timers;
 
 namespace landfall
 {
@@ -28,9 +29,57 @@ namespace landfall
 
     private AdminControlWindow adminControlWindow = null;
 
+    public System.Timers.Timer timer = new System.Timers.Timer(1000 * 60);
+
     public MainWindow()
     {
       InitializeComponent();
+
+      InitTimer();
+    }
+
+    public void InitTimer()
+    {
+      timer.Elapsed += OnTimedEvent;
+      timer.Enabled = true;
+    }
+
+    public void OnTimedEvent(Object source, ElapsedEventArgs e)
+    {
+      string strday = DateTime.Now.DayOfWeek.ToString();
+      int day = App.dataManager.ConvertDayOfWeek(strday);
+      int hour = DateTime.Now.Hour;
+      int minute = DateTime.Now.Minute;
+
+      // special case for following comparison
+      if (hour == 0)
+        hour = 24;
+
+      // for administrator
+      if (App.currentUser._timeIntervals == null)
+        return;
+
+      foreach (TimeInterval ti in App.currentUser._timeIntervals)
+      {
+        if (ti.day == day && ti.start <= hour)
+        {
+          int timeEps = ti.end * 60 - (hour * 60 + minute);
+          if (timeEps < 10)
+          {
+            System.Windows.MessageBox.Show("距离重新锁屏不到10分钟， 请处理好个人数据！");
+            return;
+          }
+
+          if (timeEps < 0)
+          {
+            this.Visibility = Visibility.Visible;
+            timer.Stop();
+            App.keyboardHook.KeyMaskStart();
+            return;
+          }
+        }
+
+      }
     }
 
     public void InitNotifyIcon()
@@ -89,14 +138,21 @@ namespace landfall
       string username = userName.Text;
       string pwd = pwdBox.Password;
 
-      if (App.dataManager.Login(username, pwd))
+      int loginFlag = App.dataManager.Login(username, pwd);
+      if (loginFlag == 0)
       {
+        App.keyboardHook.KeyMaskStop();
         this.Visibility = Visibility.Hidden;
+        timer.Start();
         InitNotifyIcon();
+      }
+      else if (loginFlag == -1)
+      {
+        System.Windows.MessageBox.Show("用户名或密码不正确！");
       }
       else
       {
-        System.Windows.MessageBox.Show("用户名或密码不正确！");
+        System.Windows.MessageBox.Show("无法在此时间登陆！");
       }
     }
   }

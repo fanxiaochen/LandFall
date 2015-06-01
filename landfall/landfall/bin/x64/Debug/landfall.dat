@@ -1,0 +1,49 @@
+ó[
+  {
+    "_timeIntervals": [
+      {
+        "day": 7,
+        "start": 10,
+        "end": 12
+      },
+      {
+        "day": 4,
+        "start": 12,
+        "end": 14
+      },
+      {
+        "day": 1,
+        "start": 20,
+        "end": 22
+      },
+      {
+        "day": 2,
+        "start": 0,
+        "end": 2
+      }
+    ],
+    "_userName": "fanxiaochen",
+    "_pwd": "fan"
+  },
+  {
+    "_timeIntervals": [
+      {
+        "day": 1,
+        "start": 18,
+        "end": 20
+      },
+      {
+        "day": 5,
+        "start": 20,
+        "end": 22
+      }
+    ],
+    "_userName": "chengxiaoping",
+    "_pwd": "fan"
+  },
+  {
+    "_timeIntervals": null,
+    "_userName": "admin",
+    "_pwd": "admin"
+  }
+]

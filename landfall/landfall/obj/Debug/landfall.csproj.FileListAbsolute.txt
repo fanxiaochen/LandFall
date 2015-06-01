@@ -80,3 +80,4 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\De
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\Debug\ClearAllWindow.g.cs
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\Debug\AddNewTime.g.cs
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\Debug\AddNewTime.baml
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\Debug\LandfallHook.pdb

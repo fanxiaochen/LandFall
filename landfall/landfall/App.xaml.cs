@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Timers;
 
 namespace landfall
 {
@@ -24,11 +25,14 @@ namespace landfall
       else
       {
         base.OnStartup(e);
+        App.keyboardHook.KeyMaskStart();
       }
     }
 
     public static DataManager dataManager = new DataManager();
     public static User currentUser = null;
+    public static LandfallHook.KeyboardHook keyboardHook = new LandfallHook.KeyboardHook();
+   
   }
 
 }

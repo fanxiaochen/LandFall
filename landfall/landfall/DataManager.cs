@@ -238,7 +238,47 @@ namespace landfall
       }
     }
 
-    public bool Login(string userName, string pwd)
+    public bool isInTimeInterval(User user)
+    {
+      string strday = DateTime.Now.DayOfWeek.ToString();
+      string strhour = DateTime.Now.Hour.ToString();
+
+      int day, hour;
+
+      day = ConvertDayOfWeek(strday);
+      hour = int.Parse(strhour);
+      
+      foreach (TimeInterval ti in user._timeIntervals)
+      {
+        if (ti.day == day && (ti.start <= hour && ti.end > hour))
+          return true;
+      }
+      return false;
+    }
+
+    public int ConvertDayOfWeek(string strday)
+    {
+      int day;
+
+      if (strday == "Monday" || strday == "星期一")
+        day = 1;
+      else if (strday == "Tuesday" || strday == "星期二")
+        day = 2;
+      else if (strday == "Wednesday" || strday == "星期三")
+        day = 3;
+      else if (strday == "Thursday" || strday == "星期四")
+        day = 4;
+      else if (strday == "Friday" || strday == "星期五")
+        day = 5;
+      else if (strday == "Saturday" || strday == "星期六")
+        day = 6;
+      else
+        day = 7;
+
+      return day;
+    }
+
+    public int Login(string userName, string pwd)
     {
       foreach (User user in _users)
       {
@@ -251,21 +291,26 @@ namespace landfall
             App.currentUser._pwd = user._pwd;
 
             _users.RemoveAt(FindUserIndex(App.currentUser._userName));
-
-            return true;
+            
+            return 0;
           }
         }
         else
         {
           if (user._userName == userName && user._pwd == pwd)
           {
-            App.currentUser = user;
-            return true;
+            if (isInTimeInterval(user))
+            {
+              App.currentUser = user;
+              return 0;
+            }
+            else
+              return 1;
           }
         }
       }
 
-      return false;
+      return -1;
     }
   }
 }
