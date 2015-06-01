@@ -26,12 +26,12 @@ namespace landfall
       }
       else
       {
-        readDataFile();
+        ReadDataFile();
         return true;
       }
     }
 
-    public void readDataFile()
+    public void ReadDataFile()
     {
       FileStream fs = new FileStream(_dataFile, FileMode.Open);
       BinaryReader br = new BinaryReader(fs);
@@ -41,7 +41,7 @@ namespace landfall
       fs.Close();
     }
 
-    public void saveDataFile()
+    public void SaveDataFile()
     {
       FileStream fs = new FileStream(_dataFile, FileMode.Create);
       BinaryWriter bw = new BinaryWriter(fs);
@@ -63,7 +63,7 @@ namespace landfall
         }
       }
       _users.Add(user);
-      saveDataFile();
+      SaveDataFile();
       return true;
     }
 
@@ -80,7 +80,7 @@ namespace landfall
         if (user._userName == userName)
         {
           _users.Remove(user);
-          saveDataFile();
+          SaveDataFile();
           return true;
         }
       }
@@ -102,7 +102,7 @@ namespace landfall
       }
       _users.Clear();
       _users.Add(admin);
-      saveDataFile();
+      SaveDataFile();
     }
 
     public void OverwriteUser(User currentUser)
@@ -116,12 +116,32 @@ namespace landfall
           break;
         }
       }
-      saveDataFile();
+      SaveDataFile();
     }
 
     public ObservableCollection<User> GetUsers()
     {
       return _users;
+    }
+
+    public int FindUserIndex(string userName)
+    {
+      for (int index = 0, length = _users.Count; index < length; ++index)
+      {
+        if (userName == _users[index]._userName)
+        {
+          return index;
+        }
+      }
+      return -1;
+    }
+
+    public void ClearTimeIntervals()
+    {
+      foreach (User user in _users)
+      {
+        user._timeIntervals.Clear();
+      }
     }
 
     public bool Login(string userName, string pwd)

@@ -44,8 +44,17 @@
     				</LinearGradientBrush>
     			</TabItem.Background>
     			<Grid Background="#FF879DA7">
-    				<DataGrid HorizontalAlignment="Left" VerticalAlignment="Top" Height="282.327" Width="520.4"/>
-    			</Grid>
+          <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="282.327" Width="520.4" AutoGenerateColumns="True" 
+                    IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" > <!--SelectedCellsChanged="SelectedCellsChanged">-->
+            <DataGrid.ContextMenu>
+              <ContextMenu>
+                <MenuItem x:Name="setUser" Header="指定用户" Click="Table_Click_Add"/>
+                <MenuItem x:Name="deleteUser" Header="清除用户" Click="Table_Click_Delete"/>
+                <MenuItem x:Name="clearTable" Header="清空列表" Click="Table_Click_Clear"/>
+              </ContextMenu>
+            </DataGrid.ContextMenu>
+          </DataGrid>
+        </Grid>
     		</TabItem>
     	</TabControl>
     </Grid>

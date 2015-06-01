@@ -17,7 +17,7 @@ namespace landfall
   {
     public string _userName {get; set;}
     public string _pwd {get; set;}
-    public TimeInterval[] _timeIntervals = null;
+    public List<TimeInterval> _timeIntervals = new List<TimeInterval>();
 
     public void ChangePassword(string newPwd)
     {
