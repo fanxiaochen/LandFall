@@ -1,4 +1,4 @@
-™[
+ï[
   {
     "_timeIntervals": [
       {
@@ -23,6 +23,11 @@
       },
       {
         "day": 2,
+        "start": 22,
+        "end": 24
+      },
+      {
+        "day": 2,
         "start": 0,
         "end": 2
       }
@@ -32,11 +37,6 @@
   },
   {
     "_timeIntervals": [
-      {
-        "day": 1,
-        "start": 18,
-        "end": 20
-      },
       {
         "day": 5,
         "start": 20,
@@ -50,6 +50,11 @@
     "_timeIntervals": [],
     "_userName": "fdasf",
     "_pwd": "wefaga"
+  },
+  {
+    "_timeIntervals": [],
+    "_userName": "ffffff",
+    "_pwd": "dddd"
   },
   {
     "_timeIntervals": null,

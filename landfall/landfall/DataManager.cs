@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows;
 using System.Data;
+using System.Security.Cryptography;
 
 using Newtonsoft.Json;
 
@@ -165,6 +166,7 @@ namespace landfall
     {
       FileStream fs = new FileStream(_dataFile, FileMode.Open);
       BinaryReader br = new BinaryReader(fs);
+     // br.read
       string json = br.ReadString();
       _users = JsonConvert.DeserializeObject<ObservableCollection<User>>(json);
       br.Close();
@@ -332,7 +334,7 @@ namespace landfall
             App.currentUser._pwd = user._pwd;
 
             _users.RemoveAt(FindUserIndex(App.currentUser._userName));
-            
+
             return 0;
           }
         }

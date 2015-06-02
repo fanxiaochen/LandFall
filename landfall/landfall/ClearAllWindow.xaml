@@ -1,11 +1,11 @@
 ﻿<Window x:Class="landfall.ClearAllWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ClearAllWindow" Height="202.4" Width="410.4" WindowStyle="None" WindowStartupLocation="CenterScreen" FontFamily="STXingkai" FontSize="21.333">
+        Title="删除所有用户" Height="202.4" Width="410.4" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" FontFamily="STFangsong" FontSize="21.333">
     <Grid>
-    	<Label Content="确定删除所有用户数据？" HorizontalAlignment="Left" Margin="88.533,37.8,0,0" VerticalAlignment="Top" Width="305.467"/>
-    	<Button Content="确认" HorizontalAlignment="Left" Margin="54.4,105,0,0" VerticalAlignment="Top" Width="81.4" Click="Button_Click_Confirm"/>
-    	<Button Content="取消" HorizontalAlignment="Left" Margin="264,105,0,0" VerticalAlignment="Top" Width="81.4" Click="Button_Click_Cancel"/>
+    	<Label Content="确定删除所有用户数据？" HorizontalAlignment="Left" Margin="88.533,37.8,0,0" VerticalAlignment="Top" Width="305.467" FontFamily="STFangsong"/>
+    	<Button Content="确认" HorizontalAlignment="Left" Margin="54.4,105,0,0" VerticalAlignment="Top" Width="81.4" Click="Button_Click_Confirm" FontFamily="STFangsong"/>
+    	<Button Content="取消" HorizontalAlignment="Left" Margin="264,105,0,0" VerticalAlignment="Top" Width="81.4" Click="Button_Click_Cancel" FontFamily="STFangsong"/>
         
     </Grid>
 </Window>
