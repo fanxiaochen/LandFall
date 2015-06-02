@@ -26,11 +26,17 @@
           <ListView x:Name="listView" HorizontalAlignment="Left" Height="282.327" VerticalAlignment="Top" Width="266.4" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
           	<ListView.View>
           		<GridView>
-                <GridViewColumn Width="133" Header="用户名" DisplayMemberBinding="{Binding _userName}"/>
-                <GridViewColumn Width="133" Header="密码" DisplayMemberBinding="{Binding _pwd}"/>
+                <GridViewColumn Width="266" Header="用户名" DisplayMemberBinding="{Binding _userName}"/>
+                <!--<GridViewColumn Width="133" Header="密码" DisplayMemberBinding="{Binding _pwd}"/>-->
                 <GridViewColumn/>
           		</GridView>
           	</ListView.View>
+
+            <ListView.ContextMenu>
+              <ContextMenu>
+                <MenuItem x:Name="wtPwd" Header="查看密码" Click="WatchPassword"/>
+              </ContextMenu>
+            </ListView.ContextMenu>
           </ListView>
         </Grid>
     		</TabItem>

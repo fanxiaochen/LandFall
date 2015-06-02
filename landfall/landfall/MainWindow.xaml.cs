@@ -29,6 +29,8 @@ namespace landfall
 
     private AdminControlWindow adminControlWindow = null;
 
+    private UserControlWindow userControlWindow = null;
+
     public System.Timers.Timer timer = new System.Timers.Timer(1000 * 60);
 
     public MainWindow()
@@ -72,9 +74,14 @@ namespace landfall
 
           if (timeEps < 0)
           {
+            App.currentUser = null;
+            App.dataManager.loadFile(App.dataManager.getDataFile()); // not the first startup
             this.Visibility = Visibility.Visible;
+
             timer.Stop();
+
             App.keyboardHook.KeyMaskStart();
+
             return;
           }
         }
@@ -84,6 +91,9 @@ namespace landfall
 
     public void InitNotifyIcon()
     {
+      if (notifyIcon != null)
+        return;
+
       notifyIcon = new NotifyIcon();
       notifyIcon.BalloonTipText = "landfall runnning...";
       notifyIcon.Text = "landfall";
@@ -93,13 +103,15 @@ namespace landfall
 
       System.Windows.Forms.MenuItem itemControlPanel = new System.Windows.Forms.MenuItem("控制面板");
       System.Windows.Forms.MenuItem itemChangePwd = new System.Windows.Forms.MenuItem("修改密码");
+      System.Windows.Forms.MenuItem itemLogout = new System.Windows.Forms.MenuItem("注销用户");
       System.Windows.Forms.MenuItem itemAbout = new System.Windows.Forms.MenuItem("关于landfall");
 
-      System.Windows.Forms.MenuItem[] children = new System.Windows.Forms.MenuItem[] { itemControlPanel, itemChangePwd, itemAbout };
+      System.Windows.Forms.MenuItem[] children = new System.Windows.Forms.MenuItem[] { itemControlPanel, itemChangePwd, itemLogout, itemAbout };
       notifyIcon.ContextMenu = new System.Windows.Forms.ContextMenu(children);
 
       itemControlPanel.Click += new System.EventHandler(Controlpanel_Click);
       itemChangePwd.Click += new System.EventHandler(Changepwd_Click);
+      itemLogout.Click += new System.EventHandler(Logout_Click);
       itemAbout.Click += new System.EventHandler(About_Click);
     }
 
@@ -115,7 +127,11 @@ namespace landfall
       }
       else
       {
+        if (userControlWindow != null)
+          userControlWindow.Close();
 
+        userControlWindow = new UserControlWindow();
+        userControlWindow.ShowDialog();
       }
     }
 
@@ -126,6 +142,17 @@ namespace landfall
 
       changePwdWindow = new ChangePwdWindow();
       changePwdWindow.ShowDialog();
+    }
+
+    public void Logout_Click(object sender, EventArgs e)
+    {
+      App.currentUser = null;
+      App.dataManager.loadFile(App.dataManager.getDataFile()); // not the first startup
+      this.Visibility = Visibility.Visible;
+
+      timer.Stop();
+
+      App.keyboardHook.KeyMaskStart();
     }
 
     public void About_Click(object sender, EventArgs e)
@@ -142,8 +169,13 @@ namespace landfall
       if (loginFlag == 0)
       {
         App.keyboardHook.KeyMaskStop();
+
         this.Visibility = Visibility.Hidden;
+        this.userName.Text = null;
+        this.pwdBox.Password = null;
+
         timer.Start();
+
         InitNotifyIcon();
       }
       else if (loginFlag == -1)

@@ -32,7 +32,6 @@ namespace landfall
     public static DataManager dataManager = new DataManager();
     public static User currentUser = null;
     public static LandfallHook.KeyboardHook keyboardHook = new LandfallHook.KeyboardHook();
-   
   }
 
 }

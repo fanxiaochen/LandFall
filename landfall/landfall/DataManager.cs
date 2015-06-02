@@ -16,10 +16,15 @@ namespace landfall
   {
     private string _dataFile = null;
     private ObservableCollection<User> _users = new ObservableCollection<User>();
-    private DataTable _timeDt = new DataTable("Time Table");
+    private DataTable _timeDt = null;
 
     public void InitTimeTable()
     {
+      if (_timeDt != null)
+        _timeDt = null;
+
+      _timeDt = new DataTable("Time Table");
+
       DataColumn times = new DataColumn("时间");
       DataColumn mon = new DataColumn("周一");
       DataColumn tus = new DataColumn("周二");
@@ -50,6 +55,27 @@ namespace landfall
       _timeDt.Rows.Add("02-04", " ", " ", " ", " ", " ", " ", " ");
       _timeDt.Rows.Add("04-06", " ", " ", " ", " ", " ", " ", " ");
       _timeDt.Rows.Add("06-08", " ", " ", " ", " ", " ", " ", " ");
+    }
+
+    public void UpdateTimeTableFromSingle()
+    {
+      ClearTimeTable();
+
+      foreach (TimeInterval ti in App.currentUser._timeIntervals)
+      {
+        int col = ti.day;
+        int row = -1;
+        if (ti.start >= 8)
+        {
+          row = (ti.start - 8) / 2;
+        }
+        else
+        {
+          row = (ti.start + 24 - 8) / 2;
+        }
+
+        _timeDt.Rows[row][col] = App.currentUser._userName;
+      }
     }
 
     public void UpdateTimeTableFromUsers()
@@ -207,6 +233,10 @@ namespace landfall
       UpdateTimeTableFromUsers();
     }
 
+    public string getDataFile()
+    {
+      return _dataFile;
+    }
 
     public ObservableCollection<User> GetUsers()
     {
@@ -216,6 +246,17 @@ namespace landfall
     public DataTable getDataTable()
     {
       return _timeDt;
+    }
+
+    public string FindPassword(string userName)
+    {
+      int index = FindUserIndex(userName);
+      if (index != -1)
+      {
+        return _users[index]._pwd;
+      }
+
+      return null;
     }
 
     public int FindUserIndex(string userName)

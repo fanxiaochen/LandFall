@@ -1,4 +1,4 @@
-ó[
+™[
   {
     "_timeIntervals": [
       {
@@ -10,6 +10,11 @@
         "day": 4,
         "start": 12,
         "end": 14
+      },
+      {
+        "day": 2,
+        "start": 14,
+        "end": 16
       },
       {
         "day": 1,
@@ -40,6 +45,11 @@
     ],
     "_userName": "chengxiaoping",
     "_pwd": "fan"
+  },
+  {
+    "_timeIntervals": [],
+    "_userName": "fdasf",
+    "_pwd": "wefaga"
   },
   {
     "_timeIntervals": null,

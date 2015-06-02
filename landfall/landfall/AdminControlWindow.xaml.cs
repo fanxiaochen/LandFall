@@ -27,7 +27,6 @@ namespace landfall
     public ClearAllWindow clearAllWindow = null;
 
     public DataSet dataSet = new DataSet();
-    //public DataTable timeDt = new DataTable("Time Table");
 
     public AdminControlWindow()
     {
@@ -76,6 +75,13 @@ namespace landfall
       }
 
       App.dataManager.UpdateUsersFromTimeTable();
+    }
+
+    private void WatchPassword(object sender, RoutedEventArgs e)
+    {
+      string userName = (listView.SelectedItem as User)._userName;
+      string pwd = App.dataManager.FindPassword(userName);
+      MessageBox.Show(pwd);
     }
 
     private void Button_Click_Add(object sender, RoutedEventArgs e)
