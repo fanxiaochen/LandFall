@@ -37,6 +37,7 @@ namespace landfall
 
     private System.Timers.Timer taskMgrTimer = new System.Timers.Timer(100);
 
+
     public MainWindow()
     {
       InitializeComponent();
@@ -80,6 +81,9 @@ namespace landfall
 
       if (timeToLogout)
       {
+        App.dataManager.getRecorder().GetEndTime();
+        App.dataManager.getRecorder().WriteRecord();
+
         System.Windows.Forms.Application.Restart();
         Environment.Exit(0); // kill current landfall app...
         // App.Current.Shutdown() doesn't work here...
@@ -197,6 +201,9 @@ namespace landfall
     // restart application
     public void Logout_Click(object sender, EventArgs e)
     {
+      App.dataManager.getRecorder().GetEndTime();
+      App.dataManager.getRecorder().WriteRecord();
+
       System.Windows.Forms.Application.Restart();
       Environment.Exit(0);
     }
@@ -214,6 +221,11 @@ namespace landfall
       int loginFlag = App.dataManager.Login(username, pwd);
       if (loginFlag == 0)
       {
+        string basePath = AppDomain.CurrentDomain.BaseDirectory;
+        string dataSource = basePath + "landfall.txt";
+        App.dataManager.getRecorder().GetRecordFile(dataSource);
+        App.dataManager.getRecorder().GetStartTime();
+
         App.keyboardHook.KeyMaskStop();
 
         this.Visibility = Visibility.Hidden;

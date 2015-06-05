@@ -110,5 +110,10 @@ namespace landfall
       clearAllWindow = new ClearAllWindow();
       clearAllWindow.ShowDialog();
     }
+
+    private void Button_Click_Record(object sender, RoutedEventArgs e)
+    {
+      System.Diagnostics.Process.Start("notepad.exe", App.dataManager.getRecorder().GetRecordFile());
+    }
   }
 }

@@ -19,6 +19,8 @@ namespace landfall
     private ObservableCollection<User> _users = new ObservableCollection<User>();
     private DataTable _timeDt = null;
 
+    private Recorder _recorder = new Recorder();
+
     public void InitTimeTable()
     {
       if (_timeDt != null)
@@ -248,6 +250,11 @@ namespace landfall
     public DataTable getDataTable()
     {
       return _timeDt;
+    }
+
+    public Recorder getRecorder()
+    {
+      return _recorder;
     }
 
     public string FindPassword(string userName)
