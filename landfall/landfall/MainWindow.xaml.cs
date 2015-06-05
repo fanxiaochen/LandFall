@@ -42,8 +42,20 @@ namespace landfall
       InitializeComponent();
 
       InitTimer();
+    }
 
-      this.Activate(); // bring focus on this window
+    protected override void OnContentRendered(EventArgs e)
+    {
+      int activateCount = 0;
+      const int CountMax = 100;
+      while (!this.Activate() && activateCount < CountMax) { activateCount++; }
+      if (activateCount == CountMax)
+      {
+        System.Windows.MessageBox.Show("无法获得系统当前焦点！程序异常退出！");
+        Environment.Exit(0);
+      }
+
+      base.OnContentRendered(e);
     }
 
     public void InitTimer()
@@ -51,8 +63,8 @@ namespace landfall
       timer.Elapsed += OnTimedEvent;
       timer.Enabled = true;
 
-      taskMgrTimer.Elapsed += OnTaskMgrTimedEvent;
-      taskMgrTimer.Enabled = true;
+      //taskMgrTimer.Elapsed += OnTaskMgrTimedEvent;
+      //taskMgrTimer.Enabled = true;
     }
 
     public void OnTimedEvent(Object source, ElapsedEventArgs e)

@@ -31,9 +31,9 @@
         </Grid.RowDefinitions>
         <Label Content="用户名" HorizontalAlignment="Left" Margin="21.6,10,0,0" VerticalAlignment="Top" FontFamily="STFangsong" FontSize="21.333" Height="33.273" Width="74"/>
         <Label Content="密码" HorizontalAlignment="Left" Margin="21.6,5.66,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="STFangsong" FontSize="21.333" Height="33.274" Width="74"/>
-        <PasswordBox x:Name="pwdBox" Grid.Column="1" Margin="0,5.66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="206.128" Height="33.274" FontSize="21.333" HorizontalAlignment="Left" FontFamily="STFangsong"/>
-        <TextBox x:Name="userName" Grid.Column="1" Margin="0,10,0,5.66" TextWrapping="Wrap" Width="206.128" FontSize="21.333" RenderTransformOrigin="0.486,0.396" HorizontalAlignment="Left" FontFamily="STFangsong"/>
-        <Button Content="登录" HorizontalAlignment="Left" Height="28.933" Margin="22.341,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="92.8" Grid.Column="1" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click" Background="#FFAAF6A9"/>
+        <PasswordBox x:Name="pwdBox" Grid.Column="1" Margin="0,5.66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="206.128" Height="33.274" FontSize="21.333" HorizontalAlignment="Left" FontFamily="STFangsong" TabIndex="1"/>
+        <TextBox x:Name="userName" Grid.Column="1" Margin="0,10,0,5.66" TextWrapping="Wrap" Width="206.128" FontSize="21.333" RenderTransformOrigin="0.486,0.396" HorizontalAlignment="Left" FontFamily="STFangsong" TabIndex="0"/>
+        <Button Content="登录" HorizontalAlignment="Left" Height="28.933" Margin="22.341,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="92.8" Grid.Column="1" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click" Background="#FFAAF6A9" TabIndex="2"/>
       </Grid>
     </Border>
     <Image HorizontalAlignment="Left" Height="180" Margin="-171.2,-393.873,0,0" VerticalAlignment="Top" Width="170" Source="sysu.png"/>

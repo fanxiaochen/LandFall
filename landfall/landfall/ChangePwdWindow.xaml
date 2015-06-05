@@ -12,9 +12,9 @@
     		<RowDefinition/>
     	</Grid.RowDefinitions>
     	<Label Content="请输入当前密码" HorizontalAlignment="Left" Margin="34.4,26.6,0,0" VerticalAlignment="Top" Width="177.2" FontFamily="STFangsong" FontSize="21.333" Grid.ColumnSpan="2" Height="33.273"/>
-    	<PasswordBox x:Name="pwdBox" Grid.Column="1" HorizontalAlignment="Left" Margin="0,26.6,0,0" VerticalAlignment="Top" Width="207.2" Height="33.273" FontFamily="STFangsong" FontSize="21.333"/>
-    	<Button Content="确认" HorizontalAlignment="Left" Height="30.4" Margin="61.6,26.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="96" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click_Confirm"/>
-    	<Button Content="取消" HorizontalAlignment="Left" Height="30.4" Margin="80.112,26.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="96" Grid.Column="1" RenderTransformOrigin="0.383,0.632" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click_Cancel"/>
+    	<PasswordBox x:Name="pwdBox" Grid.Column="1" HorizontalAlignment="Left" Margin="0,26.6,0,0" VerticalAlignment="Top" Width="207.2" Height="33.273" FontFamily="STFangsong" FontSize="21.333" TabIndex="0"/>
+    	<Button Content="确认" HorizontalAlignment="Left" Height="30.4" Margin="61.6,26.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="96" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click_Confirm" TabIndex="1"/>
+    	<Button Content="取消" HorizontalAlignment="Left" Height="30.4" Margin="80.112,26.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="96" Grid.Column="1" RenderTransformOrigin="0.383,0.632" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click_Cancel" TabIndex="2"/>
         
     </Grid>
 </Window>

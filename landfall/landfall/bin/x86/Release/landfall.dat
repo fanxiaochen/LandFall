@@ -1,6 +1,11 @@
-¾[
+	[
   {
     "_timeIntervals": [
+      {
+        "day": 5,
+        "start": 10,
+        "end": 12
+      },
       {
         "day": 7,
         "start": 10,

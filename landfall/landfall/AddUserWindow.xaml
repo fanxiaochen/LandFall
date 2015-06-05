@@ -14,10 +14,10 @@
     	</Grid.RowDefinitions>
     	<Label Content="请输入新用户名" HorizontalAlignment="Left" Margin="28,20.2,0,0" VerticalAlignment="Top" Width="163.2" FontFamily="STFangsong" FontSize="21.333"/>
     	<Label Content="请输入新用户密码" HorizontalAlignment="Left" Margin="28,20.6,0,0" VerticalAlignment="Top" Width="187.6" FontFamily="STFangsong" FontSize="21.333" Grid.Row="1"/>
-    	<PasswordBox x:Name="pwdBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186.8" Height="33.273" FontFamily="STFangsong" FontSize="21.333"/>
-    	<TextBox x:Name="userName" Grid.Column="1" HorizontalAlignment="Left" Height="33.273" Margin="10,20.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186.8" FontFamily="STFangsong" FontSize="21.333"/>
-    	<Button Content="确认" HorizontalAlignment="Left" Margin="60,21.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="108.6" Height="28.36" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click_Confirm"/>
-    	<Button Content="取消" HorizontalAlignment="Left" Margin="47.6,21.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="108.6" Height="28.36" FontFamily="STFangsong" FontSize="21.333" Grid.Column="1" Click="Button_Click_Cancel"/>
+    	<PasswordBox x:Name="pwdBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,20.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186.8" Height="33.273" FontFamily="STFangsong" FontSize="21.333" TabIndex="1"/>
+    	<TextBox x:Name="userName" Grid.Column="1" HorizontalAlignment="Left" Height="33.273" Margin="10,20.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186.8" FontFamily="STFangsong" FontSize="21.333" TabIndex="0"/>
+    	<Button Content="确认" HorizontalAlignment="Left" Margin="60,21.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="108.6" Height="28.36" FontFamily="STFangsong" FontSize="21.333" Click="Button_Click_Confirm" TabIndex="2"/>
+    	<Button Content="取消" HorizontalAlignment="Left" Margin="47.6,21.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="108.6" Height="28.36" FontFamily="STFangsong" FontSize="21.333" Grid.Column="1" Click="Button_Click_Cancel" TabIndex="3"/>
         
     </Grid>
 </Window>
