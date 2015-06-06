@@ -64,8 +64,8 @@ namespace landfall
       timer.Elapsed += OnTimedEvent;
       timer.Enabled = true;
 
-      //taskMgrTimer.Elapsed += OnTaskMgrTimedEvent;
-      //taskMgrTimer.Enabled = true;
+      taskMgrTimer.Elapsed += OnTaskMgrTimedEvent;
+      taskMgrTimer.Enabled = true;
     }
 
     public void OnTimedEvent(Object source, ElapsedEventArgs e)

@@ -1,4 +1,4 @@
-	[
+í[
   {
     "_timeIntervals": [
       {
@@ -12,7 +12,17 @@
         "end": 12
       },
       {
+        "day": 5,
+        "start": 11,
+        "end": 13
+      },
+      {
         "day": 4,
+        "start": 12,
+        "end": 14
+      },
+      {
+        "day": 5,
         "start": 12,
         "end": 14
       },
@@ -48,6 +58,11 @@
   {
     "_timeIntervals": [
       {
+        "day": 3,
+        "start": 16,
+        "end": 18
+      },
+      {
         "day": 5,
         "start": 20,
         "end": 22
@@ -57,12 +72,29 @@
     "_pwd": "fan"
   },
   {
-    "_timeIntervals": [],
+    "_timeIntervals": [
+      {
+        "day": 1,
+        "start": 18,
+        "end": 20
+      },
+      {
+        "day": 2,
+        "start": 5,
+        "end": 7
+      }
+    ],
     "_userName": "fdasf",
     "_pwd": "wefaga"
   },
   {
-    "_timeIntervals": [],
+    "_timeIntervals": [
+      {
+        "day": 4,
+        "start": 5,
+        "end": 7
+      }
+    ],
     "_userName": "ffffff",
     "_pwd": "dddd"
   },

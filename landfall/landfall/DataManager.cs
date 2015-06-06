@@ -46,18 +46,30 @@ namespace landfall
       _timeDt.Columns.Add(sat);
       _timeDt.Columns.Add(sun);
 
-      _timeDt.Rows.Add("08:00-10:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("10:00-12:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("12:00-14:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("14:00-16:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("16:00-18:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("18:00-20:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("20:00-22:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("22:00-24:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("00:00-02:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("02:00-04:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("04:00-06:00", " ", " ", " ", " ", " ", " ", " ");
-      _timeDt.Rows.Add("06:00-08:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("08:00-09:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("09:00-10:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("10:00-11:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("11:00-12:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("12:00-13:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("13:00-14:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("14:00-15:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("15:00-16:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("16:00-17:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("17:00-18:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("18:00-19:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("19:00-20:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("20:00-21:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("21:00-22:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("22:00-23:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("23:00-24:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("00:00-01:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("01:00-02:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("02:00-03:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("03:00-04:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("04:00-05:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("05:00-06:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("06:00-07:00", " ", " ", " ", " ", " ", " ", " ");
+      _timeDt.Rows.Add("07:00-08:00", " ", " ", " ", " ", " ", " ", " ");
     }
 
     public void UpdateTimeTableFromSingle()
@@ -70,11 +82,11 @@ namespace landfall
         int row = -1;
         if (ti.start >= 8)
         {
-          row = (ti.start - 8) / 2;
+          row = (ti.start - 8);
         }
         else
         {
-          row = (ti.start + 24 - 8) / 2;
+          row = (ti.start + 24 - 8);
         }
 
         _timeDt.Rows[row][col] = App.currentUser._userName;
@@ -93,11 +105,11 @@ namespace landfall
           int row = -1;
           if (ti.start >= 8)
           {
-            row = (ti.start - 8) / 2;
+            row = (ti.start - 8);
           }
           else
           {
-            row = (ti.start + 24 - 8) / 2;
+            row = (ti.start + 24 - 8);
           }
 
           _timeDt.Rows[row][col] = user._userName;
@@ -109,8 +121,8 @@ namespace landfall
     {
       ClearTimeIntervals();
 
-      // 12 time intervals and 1 column for times, 7 columns for days
-      for (int row = 0; row < 12; ++row)
+      // 24 time intervals and 1 column for times, 7 columns for days
+      for (int row = 0; row < 24; ++row)
       {
         for (int col = 1; col < 8; ++col)
         {
@@ -122,7 +134,7 @@ namespace landfall
           if (index != -1)
           {
             int day = col;
-            int start = (row * 2 + 8) < 24 ? (row * 2 + 8) : (row * 2 + 8 - 24);
+            int start = (row + 8) < 24 ? (row + 8) : (row + 8 - 24);
             int end = start + 2;
 
             TimeInterval timeInterval = new TimeInterval();
@@ -139,8 +151,8 @@ namespace landfall
 
     public void ClearTimeTable()
     {
-      // 12 time intervals and 1 column for times, 7 columns for days
-      for (int row = 0; row < 12; ++row)
+      // 24 time intervals and 1 column for times, 7 columns for days
+      for (int row = 0; row < 24; ++row)
       {
         for (int col = 1; col < 8; ++col)
         {

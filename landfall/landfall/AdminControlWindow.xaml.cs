@@ -65,8 +65,8 @@ namespace landfall
 
     private void Table_Click_Clear(object sender, RoutedEventArgs e)
     {
-      // 12 time intervals and 1 column for times, 7 columns for days
-      for (int row = 0; row < 12; ++row)
+      // 24 time intervals and 1 column for times, 7 columns for days
+      for (int row = 0; row < 24; ++row)
       {
         for (int col = 1; col < 8; ++col)
         {
