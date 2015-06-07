@@ -340,9 +340,9 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{093D02BA-03AF-4A8B-9700-2D913D0F521B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LandfallHook.dll</td><td>{D1AE0D4C-8047-4756-88BB-A93AFBA505D3}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfallhook.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Newtonsoft.Json.dll</td><td>{B6A5D4C2-D579-4593-83BF-43805D6A13A5}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>landfall.Primary_output</td><td>{1EEBFBFB-6585-420F-A7A9-7305684EDD1B}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfall.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LandfallHook.dll</td><td>{14C0FA45-017F-4FD4-8892-C0DF6D712C15}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfallhook.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Newtonsoft.Json.dll</td><td>{F697B8F6-4CEE-44CB-B8EE-B86A0F0417DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>landfall.Primary_output</td><td>{3B20456B-CE8E-43F4-908C-9590BAF83E8E}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfall.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -2033,9 +2033,9 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_C9F12558_CCFD_4EA6_9082_98553D3A3C21_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LandfallHook.dll</td><td/><td/><td>_71FB5E31_7BE2_43B7_A010_292148769B12_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_41255692_55C3_422B_B065_BFA72FB87AE6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>landfall.Primary_output</td><td/><td/><td>_074A8211_0519_4AF7_9574_F44B4BB5AD83_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LandfallHook.dll</td><td/><td/><td>_4C734628_FF83_4535_ACB4_0081E89B3C12_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_504265BF_85E8_4A67_B683_E211D6534268_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>landfall.Primary_output</td><td/><td/><td>_0BAC8576_9DDD_4F9C_84A3_19E11D9C72B3_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3755,7 +3755,7 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>455331562</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.ucas.com</td><td>0</td><td/><td>992181781</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.ucas.edu.cn</td><td>0</td><td/><td>1126377696</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992181781</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>455329514</td></row>
 	</table>

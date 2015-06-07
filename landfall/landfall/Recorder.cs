@@ -40,7 +40,6 @@ namespace landfall
 
     public void WriteRecord()
     {
-      GetDate();
       FileStream fs = new FileStream(recordFile, FileMode.Append);
       StreamWriter sw = new StreamWriter(fs);
       sw.Write(String.Format("用户: {0}   日期: {1}   登录时间: {2}——{3}\r\n", App.currentUser._userName, this.date,

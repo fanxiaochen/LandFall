@@ -224,6 +224,7 @@ namespace landfall
         string basePath = AppDomain.CurrentDomain.BaseDirectory;
         string dataSource = basePath + "landfall.txt";
         App.dataManager.getRecorder().GetRecordFile(dataSource);
+        App.dataManager.getRecorder().GetDate();
         App.dataManager.getRecorder().GetStartTime();
 
         App.keyboardHook.KeyMaskStop();
