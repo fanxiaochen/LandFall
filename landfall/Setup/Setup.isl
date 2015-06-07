@@ -340,9 +340,9 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{093D02BA-03AF-4A8B-9700-2D913D0F521B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LandfallHook.dll</td><td>{6C5744C3-4762-4571-8CE1-8512811E8760}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfallhook.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Newtonsoft.Json.dll</td><td>{DD2CE1B0-72C8-4395-A1D1-5B3A41CB467A}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>landfall.Primary_output</td><td>{8CA1B472-4796-441C-A66C-7F3E1C832707}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfall.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LandfallHook.dll</td><td>{D1AE0D4C-8047-4756-88BB-A93AFBA505D3}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfallhook.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Newtonsoft.Json.dll</td><td>{B6A5D4C2-D579-4593-83BF-43805D6A13A5}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>landfall.Primary_output</td><td>{1EEBFBFB-6585-420F-A7A9-7305684EDD1B}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfall.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1886,6 +1886,7 @@
 		<row><td>landfall.dat</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.dat</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\landfall.dat</td><td>1</td><td/></row>
 		<row><td>landfall.ico</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.ico</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\landfall.ico</td><td>1</td><td/></row>
 		<row><td>landfall.primary_output</td><td>landfall.Primary_output</td><td>landfall.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;landfall&gt;|Built</td><td>3</td><td/></row>
+		<row><td>landfall.txt</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\landfall.txt</td><td>1</td><td/></row>
 		<row><td>landfallhook.dll</td><td>LandfallHook.dll</td><td>LANDFA~1.DLL|LandfallHook.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\LandfallHook.dll</td><td>1</td><td/></row>
 		<row><td>newtonsoft.json.dll</td><td>Newtonsoft.Json.dll</td><td>NEWTON~1.DLL|Newtonsoft.Json.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\Newtonsoft.Json.dll</td><td>1</td><td/></row>
 	</table>
@@ -2032,9 +2033,9 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_C9F12558_CCFD_4EA6_9082_98553D3A3C21_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LandfallHook.dll</td><td/><td/><td>_4E5A67F6_B38E_445D_9340_09A724569C89_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_7BE933C1_79CE_4130_803B_0624147D9978_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>landfall.Primary_output</td><td/><td/><td>_916C11DD_7063_49A7_9F08_BC8D51FE3050_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LandfallHook.dll</td><td/><td/><td>_71FB5E31_7BE2_43B7_A010_292148769B12_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_41255692_55C3_422B_B065_BFA72FB87AE6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>landfall.Primary_output</td><td/><td/><td>_074A8211_0519_4AF7_9574_F44B4BB5AD83_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2652,7 +2653,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992209584</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992181781</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
@@ -3754,8 +3755,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>455331562</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.ucas.edu.cn</td><td>0</td><td/><td>992158480</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992209584</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.ucas.com</td><td>0</td><td/><td>992181781</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992181781</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>455329514</td></row>
 	</table>
 

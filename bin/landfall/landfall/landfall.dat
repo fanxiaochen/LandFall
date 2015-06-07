@@ -1,45 +1,25 @@
-	[
+‹[
   {
     "_timeIntervals": [
       {
-        "day": 7,
-        "start": 10,
-        "end": 12
+        "day": 2,
+        "start": 11,
+        "end": 13
+      },
+      {
+        "day": 2,
+        "start": 13,
+        "end": 15
+      },
+      {
+        "day": 6,
+        "start": 0,
+        "end": 2
       },
       {
         "day": 4,
-        "start": 12,
-        "end": 14
-      },
-      {
-        "day": 2,
-        "start": 14,
-        "end": 16
-      },
-      {
-        "day": 7,
-        "start": 14,
-        "end": 16
-      },
-      {
-        "day": 7,
-        "start": 18,
-        "end": 20
-      },
-      {
-        "day": 1,
-        "start": 20,
-        "end": 22
-      },
-      {
-        "day": 2,
-        "start": 22,
-        "end": 24
-      },
-      {
-        "day": 2,
-        "start": 0,
-        "end": 2
+        "start": 3,
+        "end": 5
       }
     ],
     "_userName": "fanxiaochen",
@@ -48,23 +28,28 @@
   {
     "_timeIntervals": [
       {
-        "day": 5,
-        "start": 20,
-        "end": 22
+        "day": 4,
+        "start": 11,
+        "end": 13
+      },
+      {
+        "day": 4,
+        "start": 16,
+        "end": 18
+      },
+      {
+        "day": 2,
+        "start": 1,
+        "end": 3
+      },
+      {
+        "day": 1,
+        "start": 7,
+        "end": 9
       }
     ],
     "_userName": "chengxiaoping",
     "_pwd": "fan"
-  },
-  {
-    "_timeIntervals": [],
-    "_userName": "fdasf",
-    "_pwd": "wefaga"
-  },
-  {
-    "_timeIntervals": [],
-    "_userName": "ffffff",
-    "_pwd": "dddd"
   },
   {
     "_timeIntervals": null,
