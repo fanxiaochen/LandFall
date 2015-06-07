@@ -50,7 +50,6 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x8
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\landfall.csproj.GenerateResource.Cache
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\landfall.exe
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\landfall.pdb
-D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\landfall.csprojResolveAssemblyReference.cache
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Debug\Microsoft.Expression.Controls.xml
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Debug\Microsoft.Expression.Drawing.xml
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Debug\Microsoft.Expression.Effects.xml

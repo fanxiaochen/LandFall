@@ -62,10 +62,6 @@ namespace landfall
       int hour = DateTime.Now.Hour;
       int minute = DateTime.Now.Minute;
 
-      // special case for following comparison
-      if (hour == 0)
-        hour = 24;
-
       // for administrator
       if (App.currentUser._timeIntervals == null)
         return;
@@ -78,10 +74,14 @@ namespace landfall
         return;
       }
 
+      bool validTimeFlag = false;
+
       foreach (TimeInterval ti in App.currentUser._timeIntervals)
       {
         if (ti.day == day && ti.start <= hour && ti.end > hour)
         {
+          validTimeFlag = true;
+
           int timeEps = ti.end * 60 - (hour * 60 + minute);
           if (timeEps <= 15 && timeEps > 0)
           {
@@ -95,8 +95,10 @@ namespace landfall
             return;
           }
         }
-
       }
+
+      if (!validTimeFlag)
+        timeToLogout = true;
     }
 
     public void OnTaskMgrTimedEvent(Object source, ElapsedEventArgs e)
@@ -113,7 +115,7 @@ namespace landfall
             return;
           }
         }
-        catch (System.Exception ex)
+        catch
         {
           System.Windows.MessageBox.Show("屏蔽任务管理器失败！");
           return;

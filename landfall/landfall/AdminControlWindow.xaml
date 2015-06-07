@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:core="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:landfall"
-        Title="控制面板" Height="464" Width="685.6" WindowStartupLocation="CenterScreen" FontFamily="STFangsong" FontSize="21.333" MinWidth="685.6" MaxWidth="685.6" MinHeight="464" MaxHeight="464"
+        Title="控制面板" Height="509.6" Width="788.8" WindowStartupLocation="CenterScreen" FontFamily="STFangsong" FontSize="21.333"
         ResizeMode="NoResize">
   <Window.Resources>
     <Style TargetType="ListViewItem">
@@ -11,7 +11,7 @@
     </Style>
   </Window.Resources>
   
-  <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,3.6,0" Height="434.4" Width="675.6">
+  <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-6,-3.8" Height="484.2" Width="788.8">
     	<Grid.Background>
     		<RadialGradientBrush>
     			<GradientStop Color="Black" Offset="0.063"/>
@@ -19,16 +19,16 @@
     			<GradientStop Color="#FFE1E6E1" Offset="0.259"/>
     		</RadialGradientBrush>
     	</Grid.Background>
-    	<TabControl HorizontalAlignment="Center" Height="434.4" VerticalAlignment="Center" Width="675.6" Background="#FFCBC7C7">
+    	<TabControl HorizontalAlignment="Center" Height="484.2" VerticalAlignment="Center" Width="788.8" Background="#FFCBC7C7">
     		<TabItem Header="用户列表" FontSize="21.333" FontFamily="STFangsong" Background="{x:Null}">
     			<Grid Background="#FF496963">
-    				<Button Content="添加用户" HorizontalAlignment="Left" Margin="410.8,61.326,0,0" VerticalAlignment="Top" Width="121.4" Height="35.673" Click="Button_Click_Add"/>
-    				<Button Content="删除用户" HorizontalAlignment="Left" Margin="410.8,163.726,0,0" VerticalAlignment="Top" Width="121.4" Height="35.673" Click="Button_Click_Delete"/>
-          <Button Content="清除用户" HorizontalAlignment="Left" Margin="410.8,265.326,0,0" VerticalAlignment="Top" Width="121.4" Height="35.673" Click="Button_Click_Clear"/>
-          <ListView x:Name="listView" HorizontalAlignment="Left" Height="390.647" VerticalAlignment="Top" Width="283.6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+    				<Button Content="添加用户" HorizontalAlignment="Left" Margin="494.8,54.126,0,0" VerticalAlignment="Top" Width="121.4" Height="35.673" Click="Button_Click_Add"/>
+    				<Button Content="删除用户" HorizontalAlignment="Left" Margin="494.8,170.926,0,0" VerticalAlignment="Top" Width="121.4" Height="35.673" Click="Button_Click_Delete"/>
+          <Button Content="清除用户" HorizontalAlignment="Left" Margin="494.8,296.526,0,0" VerticalAlignment="Top" Width="121.4" Height="35.673" Click="Button_Click_Clear"/>
+          <ListView x:Name="listView" HorizontalAlignment="Left" Height="440.447" VerticalAlignment="Top" Width="329.2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
           	<ListView.View>
           		<GridView>
-                <GridViewColumn Width="200" Header="用户名" >
+                <GridViewColumn Width="250" Header="用户名" >
                 <!--<GridViewColumn Width="133" Header="密码" DisplayMemberBinding="{Binding _pwd}"/>-->
                   <GridViewColumn.CellTemplate>
                     <DataTemplate>
@@ -49,8 +49,8 @@
     		</TabItem>
     		<TabItem Header="时间列表" FontFamily="STFangsong" FontSize="21.333" Background="{x:Null}">
     			<Grid Background="#FF879DA7">
-          <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="390.647" Width="665.6" AutoGenerateColumns="True" 
-                    IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" ColumnWidth="80" FontSize="21.333" > <!--SelectedCellsChanged="SelectedCellsChanged">-->
+          <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="440.447" Width="778.8" AutoGenerateColumns="True" 
+                    IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" ColumnWidth="95" FontSize="18.667" CanUserReorderColumns="False" CanUserSortColumns="False" > <!--SelectedCellsChanged="SelectedCellsChanged">-->
             <DataGrid.ContextMenu>
               <ContextMenu>
                 <MenuItem x:Name="setUser" Header="指定用户" Click="Table_Click_Add"/>

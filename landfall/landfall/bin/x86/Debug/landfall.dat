@@ -1,8 +1,13 @@
-‰[
+Ø[
   {
     "_timeIntervals": [
       {
         "day": 4,
+        "start": 14,
+        "end": 16
+      },
+      {
+        "day": 7,
         "start": 14,
         "end": 16
       },
