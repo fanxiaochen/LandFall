@@ -32,12 +32,15 @@ namespace landfall
     private UserControlWindow userControlWindow = null;
 
     public System.Timers.Timer timer = new System.Timers.Timer(1000 * 60);
+    private bool timeToLogout = false;
 
     public MainWindow()
     {
       InitializeComponent();
 
       InitTimer();
+
+      this.Activate(); // bring focus on this window
     }
 
     public void InitTimer()
@@ -66,22 +69,21 @@ namespace landfall
         if (ti.day == day && ti.start <= hour)
         {
           int timeEps = ti.end * 60 - (hour * 60 + minute);
-          if (timeEps < 10)
+          if (timeEps <= 15 && timeEps > 0)
           {
-            System.Windows.MessageBox.Show("距离重新锁屏不到10分钟， 请处理好个人数据！");
+            timeToLogout = true;
+            string msg = String.Format("距离重新锁屏不到{0}分钟， 请处理好个人数据！\n如果想继续使用，请联系管理员！", timeEps.ToString());
+            notifyIcon.BalloonTipText = msg;
+            notifyIcon.ShowBalloonTip(30000);
+           // System.Windows.MessageBox.Show(msg);
             return;
           }
 
-          if (timeEps < 0)
+          if (timeEps <= 0 && timeToLogout)
           {
-            App.currentUser = null;
-            App.dataManager.loadFile(App.dataManager.getDataFile()); // not the first startup
-            this.Visibility = Visibility.Visible;
-
-            timer.Stop();
-
-            App.keyboardHook.KeyMaskStart();
-
+            System.Windows.Forms.Application.Restart();
+            Environment.Exit(0); // kill current landfall app...
+                                 // App.Current.Shutdown() doesn't work here...
             return;
           }
         }
@@ -144,15 +146,11 @@ namespace landfall
       changePwdWindow.ShowDialog();
     }
 
+    // restart application
     public void Logout_Click(object sender, EventArgs e)
     {
-      App.currentUser = null;
-      App.dataManager.loadFile(App.dataManager.getDataFile()); // not the first startup
-      this.Visibility = Visibility.Visible;
-
-      timer.Stop();
-
-      App.keyboardHook.KeyMaskStart();
+      System.Windows.Forms.Application.Restart();
+      App.Current.Shutdown();
     }
 
     public void About_Click(object sender, EventArgs e)

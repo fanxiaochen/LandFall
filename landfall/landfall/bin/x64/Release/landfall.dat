@@ -1,0 +1,77 @@
+™	[
+  {
+    "_timeIntervals": [
+      {
+        "day": 3,
+        "start": 14,
+        "end": 16
+      },
+      {
+        "day": 7,
+        "start": 14,
+        "end": 16
+      },
+      {
+        "day": 4,
+        "start": 16,
+        "end": 18
+      }
+    ],
+    "_userName": "fanxiaochen",
+    "_pwd": "fan"
+  },
+  {
+    "_timeIntervals": [
+      {
+        "day": 3,
+        "start": 8,
+        "end": 10
+      },
+      {
+        "day": 2,
+        "start": 12,
+        "end": 14
+      }
+    ],
+    "_userName": "chengxiaoping",
+    "_pwd": "cheng"
+  },
+  {
+    "_timeIntervals": [
+      {
+        "day": 2,
+        "start": 18,
+        "end": 20
+      }
+    ],
+    "_userName": "fff",
+    "_pwd": "fff"
+  },
+  {
+    "_timeIntervals": [
+      {
+        "day": 3,
+        "start": 22,
+        "end": 24
+      }
+    ],
+    "_userName": "ccc",
+    "_pwd": "ccc"
+  },
+  {
+    "_timeIntervals": [
+      {
+        "day": 4,
+        "start": 22,
+        "end": 24
+      }
+    ],
+    "_userName": "ggg",
+    "_pwd": "ggg"
+  },
+  {
+    "_timeIntervals": null,
+    "_userName": "admin",
+    "_pwd": "admin"
+  }
+]

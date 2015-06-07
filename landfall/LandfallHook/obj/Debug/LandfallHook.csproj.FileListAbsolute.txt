@@ -1,0 +1,5 @@
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\bin\Debug\LandfallHook.dll
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\bin\Debug\LandfallHook.pdb
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\obj\Debug\LandfallHook.dll
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\obj\Debug\LandfallHook.pdb
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\obj\Debug\LandfallHook.csprojResolveAssemblyReference.cache

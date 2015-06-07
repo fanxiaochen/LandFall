@@ -7,8 +7,6 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x6
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\Microsoft.Expression.Interactions.dll
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\System.Windows.Interactivity.dll
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\LandfallHook.pdb
-D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\Newtonsoft.Json.pdb
-D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\Newtonsoft.Json.xml
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\de\Microsoft.Expression.Controls.resources.dll
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\es\Microsoft.Expression.Controls.resources.dll
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\fr\Microsoft.Expression.Controls.resources.dll
@@ -83,3 +81,7 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x6
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x64\Debug\landfall.csprojResolveAssemblyReference.cache
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x64\Debug\UserControlWindow.baml
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x64\Debug\UserControlWindow.g.cs
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\Newtonsoft.Json.pdb
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\LandfallHook.dll
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Debug\Newtonsoft.Json.xml
