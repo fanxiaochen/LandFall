@@ -333,7 +333,14 @@ namespace landfall
             App.currentUser._userName = user._userName;
             App.currentUser._pwd = user._pwd;
 
-            _users.RemoveAt(FindUserIndex(App.currentUser._userName));
+            int adminIndex = FindUserIndex(App.currentUser._userName);
+            if (adminIndex != -1)
+              _users.RemoveAt(adminIndex);
+            else
+            {
+              MessageBox.Show("丢失管理员账户！");
+              App.Current.Shutdown();
+            }
 
             return 0;
           }

@@ -340,9 +340,9 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{093D02BA-03AF-4A8B-9700-2D913D0F521B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LandfallHook.dll</td><td>{07E4FC62-5EAA-4BD2-AF62-94586BACE747}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfallhook.dll</td><td>20</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Newtonsoft.Json.dll</td><td>{83E0FAB3-2760-4FE8-A7BC-76F246496B42}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>20</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>landfall.Primary_output</td><td>{F608CD84-1196-4BD3-B9DD-A7CDC5921163}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfall.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LandfallHook.dll</td><td>{065AFCC9-B7A7-4AB3-8963-5C78F71367A9}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfallhook.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Newtonsoft.Json.dll</td><td>{B09C457A-9EDD-4460-9708-06629B87B6C5}</td><td>INSTALLDIR</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>landfall.Primary_output</td><td>{FB5EB14C-54DF-47ED-A295-8FEA1AD984FD}</td><td>INSTALLDIR</td><td>2</td><td/><td>landfall.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1132,7 +1132,6 @@
 		<row><td>ALLUSERSPROFILE</td><td>TARGETDIR</td><td>.:ALLUSE~1|All Users</td><td/><td>0</td><td/></row>
 		<row><td>AdminToolsFolder</td><td>TARGETDIR</td><td>.:Admint~1|AdminTools</td><td/><td>0</td><td/></row>
 		<row><td>AppDataFolder</td><td>TARGETDIR</td><td>.:APPLIC~1|Application Data</td><td/><td>0</td><td/></row>
-		<row><td>CAS</td><td>ProgramFilesFolder</td><td>CAS</td><td/><td>0</td><td/></row>
 		<row><td>CommonAppDataFolder</td><td>TARGETDIR</td><td>.:Common~1|CommonAppData</td><td/><td>0</td><td/></row>
 		<row><td>CommonFiles64Folder</td><td>TARGETDIR</td><td>.:Common64</td><td/><td>0</td><td/></row>
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
@@ -1146,10 +1145,10 @@
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
-		<row><td>LANDFALL</td><td>CAS</td><td>landfall</td><td/><td>0</td><td/></row>
+		<row><td>LANDFALL</td><td>UCAS</td><td>landfall</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
 		<row><td>MY_PRODUCT_NAME</td><td>SIAT</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
-		<row><td>MY_PRODUCT_NAME1</td><td>CAS</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
+		<row><td>MY_PRODUCT_NAME1</td><td>UCAS</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
@@ -1169,9 +1168,12 @@
 		<row><td>TARGETDIR</td><td/><td>SourceDir</td><td/><td>0</td><td/></row>
 		<row><td>TempFolder</td><td>TARGETDIR</td><td>.:Temp</td><td/><td>0</td><td/></row>
 		<row><td>TemplateFolder</td><td>TARGETDIR</td><td>.:ShellNew</td><td/><td>0</td><td/></row>
+		<row><td>UCAS</td><td>ProgramFilesFolder</td><td>UCAS</td><td/><td>0</td><td/></row>
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
+		<row><td>landfall</td><td>ucas</td><td>landfall</td><td/><td>1</td><td/></row>
+		<row><td>ucas</td><td>ProgramMenuFolder</td><td>ucas</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1881,11 +1883,11 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>landfall.dat</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.dat</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Release\landfall.dat</td><td>1</td><td/></row>
-		<row><td>landfall.ico</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.ico</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Release\landfall.ico</td><td>1</td><td/></row>
+		<row><td>landfall.dat</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.dat</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\landfall.dat</td><td>1</td><td/></row>
+		<row><td>landfall.ico</td><td>ISX_DEFAULTCOMPONENT</td><td>landfall.ico</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\landfall.ico</td><td>1</td><td/></row>
 		<row><td>landfall.primary_output</td><td>landfall.Primary_output</td><td>landfall.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;landfall&gt;|Built</td><td>3</td><td/></row>
-		<row><td>landfallhook.dll</td><td>LandfallHook.dll</td><td>LANDFA~1.DLL|LandfallHook.dll</td><td>0</td><td/><td/><td>0</td><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Release\LandfallHook.dll</td><td>1</td><td/></row>
-		<row><td>newtonsoft.json.dll</td><td>Newtonsoft.Json.dll</td><td>NEWTON~1.DLL|Newtonsoft.Json.dll</td><td>0</td><td/><td/><td>0</td><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Release\Newtonsoft.Json.dll</td><td>1</td><td/></row>
+		<row><td>landfallhook.dll</td><td>LandfallHook.dll</td><td>LANDFA~1.DLL|LandfallHook.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\LandfallHook.dll</td><td>1</td><td/></row>
+		<row><td>newtonsoft.json.dll</td><td>Newtonsoft.Json.dll</td><td>NEWTON~1.DLL|Newtonsoft.Json.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x86\Release\Newtonsoft.Json.dll</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2030,9 +2032,9 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_C9F12558_CCFD_4EA6_9082_98553D3A3C21_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LandfallHook.dll</td><td/><td/><td>_2AE3C3F8_3AB7_4DCB_B90E_CB9ACC9F2E7F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_64823134_C91E_4D26_A91F_08D8E678E88C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>landfall.Primary_output</td><td/><td/><td>_44185985_30D7_41FC_B6D2_19FFEA9B1EFC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LandfallHook.dll</td><td/><td/><td>_3DD781C4_BFEE_4F12_BDA9_371681D8C34E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_BB25A79B_3BAE_4E42_9E20_CC5AB36C972C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>landfall.Primary_output</td><td/><td/><td>_826B9E23_D889_4688_9137_31C043D20E32_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2650,7 +2652,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>UCAS</td><td>0</td><td/><td>455281676</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992197105</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
@@ -3462,6 +3464,7 @@
 		<row><td>IDS_PROGMSG_XML_UPDATE_FILE</td><td>1033</td><td>Updating XML file %s...</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>455329514</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>LAUNCH~1.EXE|Launch landfall.exe</td><td>0</td><td/><td>992209330</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>455329514</td></row>
@@ -3751,8 +3754,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>455329514</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>455331562</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.UCAS.com</td><td>0</td><td/><td>455281676</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>UCAS</td><td>0</td><td/><td>455281676</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.ucas.edu.cn</td><td>0</td><td/><td>992209393</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>ucas</td><td>0</td><td/><td>992197105</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>455329514</td></row>
 	</table>
 
@@ -3861,6 +3864,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>landfall.exe_0F7D82BA04C84BE8AB84A75E90E26FAA.exe</td><td/><td>D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\bin\x64\Release\landfall.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">

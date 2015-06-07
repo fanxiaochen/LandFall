@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandfallHook", "LandfallHook\LandfallHook.csproj", "{5C95DD7B-531E-43DB-8B09-B693DAD1CA16}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{A24A32D7-27EA-4E8B-A968-9DA59F2A7918}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DE94328F-0116-45F7-8135-ECEBB56AD243} = {DE94328F-0116-45F7-8135-ECEBB56AD243}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Timers;
+using System.Diagnostics;
 
 namespace landfall
 {
@@ -32,7 +33,8 @@ namespace landfall
     private UserControlWindow userControlWindow = null;
 
     public System.Timers.Timer timer = new System.Timers.Timer(1000 * 60);
-    private bool timeToLogout = false;
+
+    private System.Timers.Timer taskMgrTimer = new System.Timers.Timer(100);
 
     public MainWindow()
     {
@@ -47,6 +49,9 @@ namespace landfall
     {
       timer.Elapsed += OnTimedEvent;
       timer.Enabled = true;
+
+      taskMgrTimer.Elapsed += OnTaskMgrTimedEvent;
+      taskMgrTimer.Enabled = true;
     }
 
     public void OnTimedEvent(Object source, ElapsedEventArgs e)
@@ -66,12 +71,11 @@ namespace landfall
 
       foreach (TimeInterval ti in App.currentUser._timeIntervals)
       {
-        if (ti.day == day && ti.start <= hour)
+        if (ti.day == day && ti.start <= hour && ti.end > hour)
         {
           int timeEps = ti.end * 60 - (hour * 60 + minute);
           if (timeEps <= 15 && timeEps > 0)
           {
-            timeToLogout = true;
             string msg = String.Format("距离重新锁屏不到{0}分钟， 请处理好个人数据！\n如果想继续使用，请联系管理员！", timeEps.ToString());
             notifyIcon.BalloonTipText = msg;
             notifyIcon.ShowBalloonTip(30000);
@@ -88,7 +92,38 @@ namespace landfall
           }
         }
 
+        if (ti.day == day && ti.end == hour && minute == 0)
+        {
+          System.Windows.Forms.Application.Restart();
+          Environment.Exit(0); // kill current landfall app...
+          // App.Current.Shutdown() doesn't work here...
+          return;
+        }
+
       }
+    }
+
+    public void OnTaskMgrTimedEvent(Object source, ElapsedEventArgs e)
+    {
+      Process[] ps = Process.GetProcesses();
+
+      foreach(Process p in ps)
+      {
+        try
+        {
+          if (p.ProcessName.ToLower().Trim() == "taskmgr")
+          {
+            p.Kill();
+            return;
+          }
+        }
+        catch (System.Exception ex)
+        {
+          System.Windows.MessageBox.Show("屏蔽任务管理器失败！");
+          return;
+        }
+      }
+
     }
 
     public void InitNotifyIcon()
@@ -96,10 +131,13 @@ namespace landfall
       if (notifyIcon != null)
         return;
 
+      string basePath = AppDomain.CurrentDomain.BaseDirectory;
+      string dataSource = basePath + "landfall.ico";
+
       notifyIcon = new NotifyIcon();
       notifyIcon.BalloonTipText = "landfall runnning...";
       notifyIcon.Text = "landfall";
-      notifyIcon.Icon = new System.Drawing.Icon("landfall.ico");
+      notifyIcon.Icon = new System.Drawing.Icon(dataSource);
       notifyIcon.Visible = true;
       notifyIcon.ShowBalloonTip(2000);
 
@@ -150,7 +188,7 @@ namespace landfall
     public void Logout_Click(object sender, EventArgs e)
     {
       System.Windows.Forms.Application.Restart();
-      App.Current.Shutdown();
+      Environment.Exit(0);
     }
 
     public void About_Click(object sender, EventArgs e)

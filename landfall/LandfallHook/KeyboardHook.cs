@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.IO;
+using System.Diagnostics;
 
 namespace LandfallHook
 {
@@ -70,6 +71,10 @@ namespace LandfallHook
 
     /// </summary>
     /// <returns></returns>
+    /// 
+    [DllImport("kernel32.dll")]
+    public static extern IntPtr GetModuleHandle(string name);
+
     [DllImport("kernel32")]
     public static extern int GetCurrentThreadId();
 
@@ -122,8 +127,10 @@ CallingConvention.StdCall)]
         KeyboardHookProcedure = new KeyboardProc(KeyboardHookProc);
 
         // 设置线程钩子
+        //hKeyboardHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardHookProcedure,
+        //    Marshal.GetHINSTANCE(Assembly.GetExecutingAssembly().GetModules()[0]), 0);
         hKeyboardHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardHookProcedure,
-            Marshal.GetHINSTANCE(Assembly.GetExecutingAssembly().GetModules()[0]), 0);
+            GetModuleHandle(Process.GetCurrentProcess().MainModule.ModuleName), 0);
         // 如果设置钩子失败
         if (hKeyboardHook == 0)
         {
@@ -131,12 +138,6 @@ CallingConvention.StdCall)]
           throw new Exception("SetWindowsHookEx failed.");
         }
 
-        ////用二进制流的方法打开任务管理器。而且不关闭流.这样任务管理器就打开不了
-        //FileStream fs = new FileStream(Environment.ExpandEnvironmentVariables("%windir%\\system32\\taskmgr.exe"),
-        //FileMode.Open);
-        //byte[] MyByte = new byte[(int)fs.Length];
-        //fs.Write(MyByte, 0, (int)fs.Length);
-      }
     }
 
     // 卸载钩子
