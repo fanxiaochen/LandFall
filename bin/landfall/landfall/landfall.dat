@@ -1,53 +1,17 @@
-‹[
+å[
   {
     "_timeIntervals": [
       {
-        "day": 2,
-        "start": 11,
-        "end": 13
-      },
-      {
-        "day": 2,
-        "start": 13,
-        "end": 15
-      },
-      {
-        "day": 6,
-        "start": 0,
-        "end": 2
-      },
-      {
-        "day": 4,
-        "start": 3,
-        "end": 5
+        "day": 7,
+        "start": 23,
+        "end": 24
       }
     ],
     "_userName": "fanxiaochen",
     "_pwd": "fan"
   },
   {
-    "_timeIntervals": [
-      {
-        "day": 4,
-        "start": 11,
-        "end": 13
-      },
-      {
-        "day": 4,
-        "start": 16,
-        "end": 18
-      },
-      {
-        "day": 2,
-        "start": 1,
-        "end": 3
-      },
-      {
-        "day": 1,
-        "start": 7,
-        "end": 9
-      }
-    ],
+    "_timeIntervals": [],
     "_userName": "chengxiaoping",
     "_pwd": "fan"
   },

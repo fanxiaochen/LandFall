@@ -135,7 +135,7 @@ namespace landfall
           {
             int day = col;
             int start = (row + 8) < 24 ? (row + 8) : (row + 8 - 24);
-            int end = start + 2;
+            int end = start + 1;
 
             TimeInterval timeInterval = new TimeInterval();
             timeInterval.day = day;
