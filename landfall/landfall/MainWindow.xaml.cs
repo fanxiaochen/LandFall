@@ -33,6 +33,7 @@ namespace landfall
     private UserControlWindow userControlWindow = null;
 
     public System.Timers.Timer timer = new System.Timers.Timer(1000 * 60);
+    private bool timeToLogout = false;
 
     private System.Timers.Timer taskMgrTimer = new System.Timers.Timer(100);
 
@@ -69,6 +70,14 @@ namespace landfall
       if (App.currentUser._timeIntervals == null)
         return;
 
+      if (timeToLogout)
+      {
+        System.Windows.Forms.Application.Restart();
+        Environment.Exit(0); // kill current landfall app...
+        // App.Current.Shutdown() doesn't work here...
+        return;
+      }
+
       foreach (TimeInterval ti in App.currentUser._timeIntervals)
       {
         if (ti.day == day && ti.start <= hour && ti.end > hour)
@@ -76,28 +85,15 @@ namespace landfall
           int timeEps = ti.end * 60 - (hour * 60 + minute);
           if (timeEps <= 15 && timeEps > 0)
           {
+            if (timeEps == 1)
+              timeToLogout = true;
+
             string msg = String.Format("距离重新锁屏不到{0}分钟， 请处理好个人数据！\n如果想继续使用，请联系管理员！", timeEps.ToString());
             notifyIcon.BalloonTipText = msg;
             notifyIcon.ShowBalloonTip(30000);
            // System.Windows.MessageBox.Show(msg);
             return;
           }
-
-          if (timeEps <= 0 && timeToLogout)
-          {
-            System.Windows.Forms.Application.Restart();
-            Environment.Exit(0); // kill current landfall app...
-                                 // App.Current.Shutdown() doesn't work here...
-            return;
-          }
-        }
-
-        if (ti.day == day && ti.end == hour && minute == 0)
-        {
-          System.Windows.Forms.Application.Restart();
-          Environment.Exit(0); // kill current landfall app...
-          // App.Current.Shutdown() doesn't work here...
-          return;
         }
 
       }

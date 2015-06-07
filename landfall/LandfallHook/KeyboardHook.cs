@@ -137,6 +137,7 @@ CallingConvention.StdCall)]
           KeyMaskStop();
           throw new Exception("SetWindowsHookEx failed.");
         }
+      }
 
     }
 
