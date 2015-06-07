@@ -4,7 +4,7 @@
         Title="用户时间表" Height="425.8" Width="768" WindowStartupLocation="CenterScreen" FontFamily="STFangsong" FontSize="21.333" ResizeMode="NoResize">
     <Grid>
     	<DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="396.6" Width="762"
-                AutoGenerateColumns="True" IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" ColumnWidth="95" CanUserReorderColumns="False" CanUserSortColumns="False" FontSize="18.667"/>
+                AutoGenerateColumns="True" IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" ColumnWidth="94" CanUserReorderColumns="False" CanUserSortColumns="False" FontSize="18.667" RowHeight="30"/>
         
     </Grid>
 </Window>

@@ -50,7 +50,7 @@
     		<TabItem Header="时间列表" FontFamily="STFangsong" FontSize="21.333" Background="{x:Null}">
     			<Grid Background="#FF879DA7">
           <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="440.447" Width="778.8" AutoGenerateColumns="True" 
-                    IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" ColumnWidth="95" FontSize="18.667" CanUserReorderColumns="False" CanUserSortColumns="False" > <!--SelectedCellsChanged="SelectedCellsChanged">-->
+                    IsReadOnly="True" SelectionUnit="Cell" SelectionMode="Single" ColumnWidth="96" FontSize="18.667" CanUserReorderColumns="False" CanUserSortColumns="False" RowHeight="33.5" > <!--SelectedCellsChanged="SelectedCellsChanged">-->
             <DataGrid.ContextMenu>
               <ContextMenu>
                 <MenuItem x:Name="setUser" Header="指定用户" Click="Table_Click_Add"/>

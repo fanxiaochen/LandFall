@@ -191,7 +191,7 @@ namespace landfall
 
     public void About_Click(object sender, EventArgs e)
     {
-
+      System.Windows.MessageBox.Show("I learned the value of hard work by working hard.");
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
