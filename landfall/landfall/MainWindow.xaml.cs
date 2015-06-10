@@ -62,7 +62,7 @@ namespace landfall
       const int CountMax = 100;
       while (!this.Activate() && activateCount < CountMax) 
       {
-        Thread.Sleep(1000);
+        Thread.Sleep(500);
         activateCount++; 
       }
       //if (activateCount == CountMax)
