@@ -121,3 +121,4 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\l
 D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\landfall.csproj.GenerateResource.Cache
 D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\landfall.exe.manifest
 D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\landfall.application
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\landfall.csprojResolveAssemblyReference.cache

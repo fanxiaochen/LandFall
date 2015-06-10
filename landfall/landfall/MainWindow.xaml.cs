@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Timers;
 using System.Diagnostics;
+using System.Threading;
 
 namespace landfall
 {
@@ -43,18 +44,35 @@ namespace landfall
       InitializeComponent();
 
       InitTimer();
+
+      //this.Show();
+      //if (this.WindowState == WindowState.Minimized)
+      //{
+      //  this.WindowState = WindowState.Maximized;
+      //}
+
+      //this.Activate();
+      //this.Topmost = true;
+      //this.userName.Focus();
     }
 
     protected override void OnContentRendered(EventArgs e)
     {
       int activateCount = 0;
       const int CountMax = 100;
-      while (!this.Activate() && activateCount < CountMax) { activateCount++; }
-      if (activateCount == CountMax)
+      while (!this.Activate() && activateCount < CountMax) 
       {
-        System.Windows.MessageBox.Show("无法获得系统当前焦点！程序异常退出！");
-        Environment.Exit(0);
+        Thread.Sleep(1000);
+        activateCount++; 
       }
+      //if (activateCount == CountMax)
+      //{
+      //  System.Windows.MessageBox.Show("无法获得系统当前焦点！");
+      //}
+
+      this.Activate();
+      this.Topmost = true;
+      this.userName.Focus();
 
       base.OnContentRendered(e);
     }

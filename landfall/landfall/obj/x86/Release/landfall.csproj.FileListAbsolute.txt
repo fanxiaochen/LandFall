@@ -61,3 +61,4 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x8
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.application
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.exe
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.pdb
+D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.csprojResolveAssemblyReference.cache
