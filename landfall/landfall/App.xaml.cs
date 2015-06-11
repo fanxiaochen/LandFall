@@ -8,6 +8,7 @@ using System.Windows;
 using System.Timers;
 using Microsoft.Win32;
 using System.Reflection;
+using System.Runtime.InteropServices; 
 
 namespace landfall
 {
@@ -28,7 +29,7 @@ namespace landfall
       {
         base.OnStartup(e);
         App.keyboardHook.KeyMaskStart();
-
+        Taskbar.Hide();
         RunWhenStarted();
       }
     }
@@ -52,6 +53,7 @@ namespace landfall
         MessageBox.Show("设置开机启动失败！");
       }
     }
+
   }
 
 }

@@ -62,3 +62,39 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x8
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.exe
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.pdb
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Release\landfall.csprojResolveAssemblyReference.cache
+D:\LandFall\landfall\landfall\bin\x86\Release\landfall.exe.config
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.exe
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.pdb
+D:\LandFall\landfall\landfall\bin\x86\Release\landfall.exe.manifest
+D:\LandFall\landfall\landfall\bin\x86\Release\landfall.application
+D:\LandFall\landfall\landfall\bin\x86\Release\landfall.exe
+D:\LandFall\landfall\landfall\bin\x86\Release\landfall.pdb
+D:\LandFall\landfall\landfall\bin\x86\Release\LandfallHook.dll
+D:\LandFall\landfall\landfall\bin\x86\Release\Newtonsoft.Json.dll
+D:\LandFall\landfall\landfall\obj\x86\Release\AddUserWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\ChangePwdWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\ClearAllWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\DeleteUserWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\MainWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\NewPwdWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\UserControlWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\AddNewTime.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\AddUserWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\AdminControlWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\ChangePwdWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\ClearAllWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\DeleteUserWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\MainWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\NewPwdWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\UserControlWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\App.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall_MarkupCompile.cache
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall_MarkupCompile.lref
+D:\LandFall\landfall\landfall\obj\x86\Release\AddNewTime.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\AdminControlWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.g.resources
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.Properties.Resources.resources
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.csproj.GenerateResource.Cache
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.exe.manifest
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.application
+D:\LandFall\landfall\landfall\obj\x86\Release\landfall.csprojResolveAssemblyReference.cache

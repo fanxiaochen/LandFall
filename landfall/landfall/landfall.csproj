@@ -150,6 +150,7 @@
       <DependentUpon>ClearAllWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Recorder.cs" />
+    <Compile Include="Taskbar.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserControlWindow.xaml.cs">
       <DependentUpon>UserControlWindow.xaml</DependentUpon>

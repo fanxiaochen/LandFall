@@ -67,7 +67,7 @@ namespace landfall
       }
       //if (activateCount == CountMax)
       //{
-      //  System.Windows.MessageBox.Show("无法获得系统当前焦点！");
+      //    System.Windows.MessageBox.Show("无法获得系统当前焦点！");
       //}
 
       this.Activate();
@@ -246,6 +246,7 @@ namespace landfall
         App.dataManager.getRecorder().GetStartTime();
 
         App.keyboardHook.KeyMaskStop();
+        Taskbar.Show();
 
         this.Visibility = Visibility.Hidden;
         this.userName.Text = null;
