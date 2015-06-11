@@ -122,3 +122,37 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\l
 D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\landfall.exe.manifest
 D:\Xiaochen Fan - Sync disk\WorkSpace\LandFall\landfall\landfall\obj\x86\Debug\landfall.application
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\landfall.csprojResolveAssemblyReference.cache
+D:\LandFall\landfall\landfall\bin\x86\Debug\landfall.exe.config
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.exe
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.pdb
+D:\LandFall\landfall\landfall\bin\x86\Debug\landfall.exe.manifest
+D:\LandFall\landfall\landfall\bin\x86\Debug\landfall.application
+D:\LandFall\landfall\landfall\bin\x86\Debug\landfall.exe
+D:\LandFall\landfall\landfall\bin\x86\Debug\landfall.pdb
+D:\LandFall\landfall\landfall\obj\x86\Debug\AddUserWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\ChangePwdWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\ClearAllWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\DeleteUserWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\MainWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\NewPwdWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\UserControlWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\AddNewTime.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\AddUserWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\AdminControlWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\ChangePwdWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\ClearAllWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\DeleteUserWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\MainWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\NewPwdWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\UserControlWindow.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\App.g.cs
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall_MarkupCompile.cache
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall_MarkupCompile.lref
+D:\LandFall\landfall\landfall\obj\x86\Debug\AddNewTime.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\AdminControlWindow.baml
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.g.resources
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.Properties.Resources.resources
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.csproj.GenerateResource.Cache
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.exe.manifest
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.application
+D:\LandFall\landfall\landfall\obj\x86\Debug\landfall.csprojResolveAssemblyReference.cache

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\obj\x86\Debug\
+D:\LandFall\landfall\landfall\obj\x86\Debug\
 landfall
 none
 false
 DEBUG;TRACE
-D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\landfall\App.xaml
+D:\LandFall\landfall\landfall\App.xaml
 9357349564
 
-17251571780
-21-496877413
+181052005975
+21-197101036
 AddNewTime.xaml;AddUserWindow.xaml;AdminControlWindow.xaml;ChangePwdWindow.xaml;ClearAllWindow.xaml;DeleteUserWindow.xaml;MainWindow.xaml;NewPwdWindow.xaml;UserControlWindow.xaml;
 
-True
+False
 

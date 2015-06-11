@@ -3,3 +3,8 @@ D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\bi
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\obj\x86\Debug\LandfallHook.dll
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\obj\x86\Debug\LandfallHook.pdb
 D:\Xiaochen Fan - Sync disk\WorkSpace\Projects\LandFall\landfall\LandfallHook\obj\x86\Debug\LandfallHook.csprojResolveAssemblyReference.cache
+D:\LandFall\landfall\LandfallHook\bin\x86\Debug\LandfallHook.dll
+D:\LandFall\landfall\LandfallHook\bin\x86\Debug\LandfallHook.pdb
+D:\LandFall\landfall\LandfallHook\obj\x86\Debug\LandfallHook.csprojResolveAssemblyReference.cache
+D:\LandFall\landfall\LandfallHook\obj\x86\Debug\LandfallHook.dll
+D:\LandFall\landfall\LandfallHook\obj\x86\Debug\LandfallHook.pdb

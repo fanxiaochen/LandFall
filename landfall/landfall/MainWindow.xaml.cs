@@ -17,6 +17,7 @@ using System.Drawing;
 using System.Timers;
 using System.Diagnostics;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace landfall
 {
@@ -38,6 +39,9 @@ namespace landfall
 
     private System.Timers.Timer taskMgrTimer = new System.Timers.Timer(100);
 
+    [DllImport("user32.dll")]
+    public static extern bool ExitWindowsEx(uint uFlags, uint dwReason);
+
 
     public MainWindow()
     {
@@ -45,30 +49,25 @@ namespace landfall
 
       InitTimer();
 
-      //this.Show();
-      //if (this.WindowState == WindowState.Minimized)
-      //{
-      //  this.WindowState = WindowState.Maximized;
-      //}
-
-      //this.Activate();
-      //this.Topmost = true;
-      //this.userName.Focus();
+      this.Activate();
+      this.Topmost = true;
+      this.userName.Focus();
     }
 
     protected override void OnContentRendered(EventArgs e)
     {
-      int activateCount = 0;
-      const int CountMax = 100;
-      while (!this.Activate() && activateCount < CountMax) 
-      {
-        Thread.Sleep(500);
-        activateCount++; 
-      }
-      //if (activateCount == CountMax)
-      //{
-      //    System.Windows.MessageBox.Show("无法获得系统当前焦点！");
-      //}
+        int activateCount = 0;
+        const int CountMax = 60;
+        while (!this.Activate() && activateCount < CountMax)
+        {
+            Thread.Sleep(500);
+            activateCount++;
+        }
+        if (activateCount == CountMax)
+        {
+            ExitWindowsEx(0, 0);
+            System.Windows.MessageBox.Show("无法获得系统当前焦点！");
+        }
 
       this.Activate();
       this.Topmost = true;

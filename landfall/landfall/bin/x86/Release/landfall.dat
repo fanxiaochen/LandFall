@@ -1,6 +1,11 @@
-ã[
+²[
   {
     "_timeIntervals": [
+      {
+        "day": 4,
+        "start": 16,
+        "end": 17
+      },
       {
         "day": 3,
         "start": 0,
