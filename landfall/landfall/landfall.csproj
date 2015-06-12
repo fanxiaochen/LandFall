@@ -149,6 +149,7 @@
     <Compile Include="ClearAllWindow.xaml.cs">
       <DependentUpon>ClearAllWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForceFrontWindow.cs" />
     <Compile Include="Recorder.cs" />
     <Compile Include="Taskbar.cs" />
     <Compile Include="User.cs" />

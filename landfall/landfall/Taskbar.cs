@@ -25,9 +25,9 @@ namespace landfall
 		private static extern System.IntPtr FindWindow(string lpClassName, string lpWindowName);
 		[DllImport("user32.dll", SetLastError = true)]
 		private static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className,  string windowTitle);
-        [DllImport("user32.dll")]
-        private static extern IntPtr FindWindowEx(IntPtr parentHwnd, IntPtr childAfterHwnd, IntPtr className, string windowText);
-        [DllImport("user32.dll")]
+    [DllImport("user32.dll")]
+    private static extern IntPtr FindWindowEx(IntPtr parentHwnd, IntPtr childAfterHwnd, IntPtr className, string windowText);
+    [DllImport("user32.dll")]
 		private static extern int ShowWindow(IntPtr hwnd, int nCmdShow);
 		[DllImport("user32.dll")]
 		private static extern uint GetWindowThreadProcessId(IntPtr hwnd, out int lpdwProcessId);

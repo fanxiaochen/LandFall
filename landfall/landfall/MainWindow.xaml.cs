@@ -18,6 +18,7 @@ using System.Timers;
 using System.Diagnostics;
 using System.Threading;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace landfall
 {
@@ -56,18 +57,22 @@ namespace landfall
 
     protected override void OnContentRendered(EventArgs e)
     {
-        int activateCount = 0;
-        const int CountMax = 60;
-        while (!this.Activate() && activateCount < CountMax)
-        {
-            Thread.Sleep(500);
-            activateCount++;
-        }
-        if (activateCount == CountMax)
-        {
-            ExitWindowsEx(0, 0);
-            System.Windows.MessageBox.Show("无法获得系统当前焦点！");
-        }
+      IntPtr mainHandle = Process.GetCurrentProcess().MainWindowHandle;
+      ForceFrontWindow.ForceForegroundWindow(mainHandle);
+
+
+      int activateCount = 0;
+      const int CountMax = 60;
+      while (!this.Activate() && activateCount < CountMax)
+      {
+        Thread.Sleep(500);
+        activateCount++;
+      }
+      if (activateCount == CountMax)
+      {
+        ExitWindowsEx(0, 0);
+        System.Windows.MessageBox.Show("无法获得系统当前焦点！");
+      }
 
       this.Activate();
       this.Topmost = true;
